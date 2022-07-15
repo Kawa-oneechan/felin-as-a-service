@@ -1,0 +1,102 @@
+{
+	"Kawa": {
+		"name": "Kawa",
+		"gender": "blessed",
+		"body": { "build": "pudgy", "height": 140, "eyes": "red" },
+		"fur": { "color": "brown", "pattern": "spots" },
+		"hair": { "color": "red", "length": "shoulder-length", "style": "straight" },
+		"birth": { "month": 6, "day": 26 },
+		"likes": { "dress": "airy clothes", "food": "chocolate", "drink": "fizzy drinks" },
+		"status": 1
+	},
+	"Letrune": {
+		"name": "Letrune",
+		"gender": "female",
+		"body": { "build": "average", "height": 155, "eyes": "amber" },
+		"fur": { "color": "golden brown", "pattern": "none" },
+		"hair": { "color": "dark brown", "length": "fairly long", "style": "wavy" },
+		"birth": { "month": 7, "day": 13 },
+		"likes": { "dress": "long dresses", "food": "meat",  "drink": "fizzy drinks" },
+		"status": 1
+	},
+	"Livra": {
+		"name": "Livra",
+		"gender": "female",
+		"body": { "build": "average", "height": 170, "eyes": "amber" },
+		"fur": { "color": "black", "pattern": "none" },
+		"hair": { "color": "black", "length": "short", "style": "straight" },
+		"birth": { "month": 10, "day": 20 },
+		"likes": { "dress": "soft clothes", "food": "meat",  "drink": "hot drinks" },
+		"status": 1
+	},
+	"Cier": {
+		"name": "Cier",
+		"gender": "female",
+		"body": { "build": "muscular", "height": 180, "eyes": "amber" },
+		"fur": { "color": "golden brown", "pattern": "stripes" },
+		"hair": { "color": "brown", "length": "short", "style": "straight" },
+		"birth": { "month": 6, "day": 2 },
+		"likes": { "dress": "roomy tops", "food": "meat",  "drink": "warm drinks" },
+		"status": 1
+	},
+	"Elaie": {
+		"name": "Elaie",
+		"gender": "female",
+		"body": { "build": "lithe", "height": 155, "eyes": "golden" },
+		"fur": { "color": "white", "pattern": "none" },
+		"hair": { "color": "white", "length": "ass-length", "style": "straight" },
+		"birth": { "month": 2, "day": 13 },
+		"likes": { "dress": "soft dresses", "food": "meat",  "drink": "warm drinks" },
+		"status": 1
+	},
+	"Chelsie": {
+		"name": "Chelsie",
+		"gender": "female",
+		"body": { "build": "muscular", "height": 182, "eyes": "golden" },
+		"fur": { "color": "orange", "pattern": "spots" },
+		"hair": { "color": "red", "length": "short", "style": "straight" },
+		"birth": { "month": 0, "day": "???" },
+		"likes": { "dress": "roomy tops", "food": "meat", "drink": "beer" },
+		"status": 1
+	},
+	"Farrah": {
+		"name": "Farrah",
+		"gender": "female",
+		"body": { "build": "lithe", "height": 170, "eyes": "blue" },
+		"fur": { "color": "pale yellow", "pattern": "none" },
+		"hair": { "color": "red-brown", "length": "puffy", "style": "curly" },
+		"birth": { "month": 2, "day": 10 },
+		"likes": { "dress": "satin tops", "food": "chocolate", "drink": "gatorade" },
+		"status": 1
+	},
+	"Atari": {
+		"name": "Atari",
+		"gender": "female",
+		"body": { "build": "average", "height": 130, "eyes": "brown" },
+		"fur": { "color": "brown", "pattern": "rosettes" },
+		"hair": { "color": "pale red", "length": "shoulder-length", "style": "straight" },
+		"birth": { "month": 1, "day": 21 },
+		"likes": { "dress": "roomy clothes", "food": "doritos", "drink": "fizzy drinks" },
+		"status": 1
+	},
+	"Ai": {
+		"name": "Ai",
+		"gender": "female",
+		"body": { "build": "lithe", "height": 30, "eyes": "red" },
+		"fur": { "color": "pale red", "pattern": "scanlines" },
+		"hair": { "color": "red", "length": "short", "style": "straight" },
+		"birth": { "month": 1, "day": 12 },
+		"likes": { "dress": "sparkly dresses", "food": "none", "drink": "none" },
+		"status": 1
+	},
+	"Cirno": {
+		"name": "Cirno",
+		"gender": "female",
+		"body": { "build": "skinny", "height": 160, "eyes": "blue" },
+		"fur": { "color": "pale blue", "pattern": "none" },
+		"hair": { "color": "light blue", "length": "shoulder-length", "style": "straight" },
+		"birth": { "month": 9, "day": 9 },
+		"likes": { "dress": "airy dresses", "food": "saucy food", "drink": "cold drinks" },
+		"status": 0
+	}
+}

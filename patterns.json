@@ -1,0 +1,42 @@
+{
+	"male": ["[nameSV][nameMC][nameMV][nameMEnd]", "[nameSC][nameMV][nameMC][nameMV][nameMEnd]"],
+	"female": ["[nameSV][nameMC][nameMV][nameFEnd]", "[nameSC][nameMV][nameMC][nameMV][nameFEnd]"],
+
+	"nameSV": ["A", "Ae","Ah", "Ai", "E", "I", "Ja", "O", "U"],
+	"nameSC": ["B", "Ch", "F","Fh", "Gr", "H", "Hr", "J", "K", "Kh", "L", "M", "Mr", "N", "Rh", "S", "T", "Th", "V"],
+	"nameMV": ["a", "ae","ah", "ai", "e", "i", "o", "u"],
+	"nameMC": ["b", "ch", "f","fh", "gr", "h", "hr", "ja", "k", "kh", "l", "m", "mr", "n", "rh", "s", "t", "th", "v"],
+	"nameMEnd": ["lir", "rth", "ler", "rith", "lair", "len", "rath", "rthir", "ron", "vren", "thin", "", "", "", ""],
+	"nameFEnd": ["ri", "mine", "rthi", "ne", "vra", "aie", "rith", "", "", "", ""],
+
+	"place": ["[New?][ColorThing][PlaceSize]", "[New?][nameSV][nameMC][nameMV][PlaceSize]"],
+
+	"New?": ["", "", "", "", "", "", "", "", "New ", "Old ", "West ", "East ", "North ", "South ", "Upper "],
+	"ColorThing": ["[Color][thing]", "[Thing]"],
+	"Color": ["Black", "White", "Red", "Green", "Blue", "Yellow", "Teal", "Lilac"],
+	"Thing": ["Shard", "Leaf", "Lake", "Pier", "Hill", "Glade", "Field", "Cap"],
+	"thing": ["shard", "leaf", "lake", "pier", "hill", "glade", "field", "cap"],
+	"PlaceSize": [" City", " Town", " Village", " Halls", " Underhalls"],
+
+	"New?2": ["", "", "", "", "", "", "", "", "Pral ", "Um ", "Lome ", "Meme ", "Beme ", "Kame ", "Fhear "],
+	"Color2": ["Tahra", "Urtha", "Lavla", "Lavuhi", "Kulithi", "Fhevla", "Khulavu", "Lamuthu"],
+	"Thing2": ["Batha", "Bilku", "Fhriss", "Dunrhisa", "Fheiul", "Kekma", "Vurrma", "Fheave"],
+	"thing2": ["batha", "bilku", "fhriss", "dunrhisa", "fheiul", "kekma", "vurrma", "fheave"],
+	"PlaceSize2": ["-shaltheran", "-altheran", "-slitheran", "-debun", "-orsdebun"],
+
+	"build": ["average", "lithe", "skinny", "sturdy", "well-defined", "muscular", "hefty", "lanky", "attractive", "pudgy"],
+	"furColor": ["black", "dark gray", "light gray", "white", "golden", "brown", "pale purple", "pale green", "bright yellow", "steel blue", "peach", "muted green", "light blue", "pale pink", "muted brown", "light pink", "mint green", "orange"],
+	"furPattern": ["none", "none", "none", "none", "stripes", "spots", "rosettes"],
+	"hairLength": ["short", "shoulder-length", "fairly long", "ass-length"],
+	"hairStyle": ["straight", "curly", "wavy", "frizzy"],
+	"hairColor": ["black", "dark gray", "light gray", "white", "golden", "brown", "purple", "green", "pale purple", "pale green", "bright yellow", "steel blue", "muted green", "light blue", "blue", "pale pink", "pink", "muted brown", "light pink", "mint green", "orange", "red"],
+	"eyeColor": ["golden", "brown", "purple", "green", "steel blue", "light blue", "pale pink", "orange", "amber"],
+	"likeDress": ["[dressFeel] [dressType]"],
+	"dressFeel": ["soft", "airy", "roomy", "tight", "fluffy", "tough", "sparkly", "rubber", "velvet", "satin"],
+	"dressType": ["shirts", "pants", "dresses", "skirts", "tops", "clothes","clothes","clothes","clothes"],
+	"likeFood": ["hot food", "spicy food", "saucy food", "sugary food", "chocolate", "meat"],
+	"likeDrink": ["fizzy drinks", "warm drinks", "hot drinks", "alcoholic drinks", "wine", "chocolate milk"],
+
+	"months": ["Atlawhura", "Mirwhura", "Teswhura", "Hletwhura", "Maewhura", "Rhwawhura", "Kitwhura", "Uthrawhura", "Plerawhura", "Aiwhura"],
+	"weekDays": ["Mirhul", "Thinhul", "Wieshul", "Teshul", "Arhul", "Khlahul", "Maehul", "Rahul", "Leihul"]
+}

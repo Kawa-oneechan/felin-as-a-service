@@ -1,0 +1,129 @@
+body {
+	background: #263238;
+	color: #5ee38a;
+	font-family: sans-serif;
+}
+input[type=text] {
+	background: #432556; /*#57346e;*/
+	border: 1px solid #c792ea;
+	color: #c792ea;
+	width: 15%;
+}
+button {
+	background: #c792ea;
+	border: 1px solid #57346e;
+	color: #57346e;
+	width: 2em;
+}
+button, input[type=text] {
+	padding: 0.25em;
+	font-size: 100%;
+}
+table, td, th {
+	border-collapse: collapse;
+	border: 1px solid #0b7500;
+}
+td {
+	color: #5ee38a;
+	padding: 2px;
+}
+th {
+	background: #28423b;
+	color: #c792ea;
+	padding: 2px;
+}
+a {
+	text-decoration: none;
+	color: #ffcb6b;
+}
+a:focused {
+	color: #c792ea;
+}
+a:active {
+	color: #daffa8;
+}
+@media all and (orientation:portrait) {
+	input[type=text] {
+		width: 80%;
+	}
+}
+@font-face {
+	font-family: 'Felinese';
+	font-style: normal;
+	font-weight: 800;
+	src: url('/faas/FelineseBold.ttf') format('truetype')
+}
+.felinese {
+	font-size: 250%;
+	font-family: 'Felinese'
+}
+
+.tag, .pos-verb::after, .pos-noun::after, .pos-adjective::after, .pos-interjection::after, .pos-proper::after, .pos-numeral::after, .pos-pronoun::after, .pos-phrase::after, .pos-affix::after, .pos-adverb::after, .pos-determiner::after, .pos-conjunction::after, .pos-auxiliary::after, .pos-adposition::after, .pos-abbreviation::after {
+	font-size: 60%;
+	margin-left: 0.5em;
+	padding: 0.20em 0.5em;
+	position: relative;
+	top: -0.25em;
+	border-radius: 0.5em;
+	color: #ffffff;
+}
+.pos-verb::after {
+	background: #9c27b0;
+	content: 'verb';
+}
+.pos-noun::after {
+	background: #3f51b5;
+	content: 'noun';
+}
+.pos-adjective::after {
+	background: #af6c0a;
+	content: 'adj';
+}
+.pos-interjection::after {
+	background: #ff9800;
+	content: 'intj';
+}
+.pos-proper::after {
+	background: #673ab7;
+	content: 'prop';
+}
+.pos-numeral::after {
+	background: #5f8b2d;
+	content: 'num';
+}
+.pos-pronoun::after {
+	background: #b51b86;
+	content: 'pron';
+}
+.pos-phrase::after {
+	background: #607d8b;
+	content: 'phrase';
+}
+.pos-affix::after {
+	background: #726e6e;
+	content: 'affix';
+}
+.pos-adverb::after {
+	background: #3a831c;
+	content: 'adv';
+}
+.pos-determiner::after {
+	background: #4caf50;
+	content: 'det';
+}
+.pos-conjunction::after {
+	background: #b7a92f;
+	content: 'conj';
+}
+.pos-auxiliary::after {
+	background: #1c8362;
+	content: 'aux';
+}
+.pos-adposition::after {
+	background: #833a1c;
+	content: 'adp';
+}
+.pos-abbreviation::after {
+	background: #874493;
+	content: 'abbr';
+}
