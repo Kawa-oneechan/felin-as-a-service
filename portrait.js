@@ -21,7 +21,7 @@ exports.getPortrait = async function(res, req)
 		[ 'body-nc' ],
 		[ 'eyes', res['body']['eyes'] ],
 		[ 'shirt' ],
-		[ 'hair1', res['hair']['color'] ],
+		[ 'hair', res['hair']['color'] ],
 		[ 'border' ],
 	];
 	for (var i = 0; i < parts.length; i++)
@@ -30,6 +30,11 @@ exports.getPortrait = async function(res, req)
 
 		if (p[0] == 'border' && (res['status'] & 1))
 			p[0] = 'premium';
+
+		if (p[0] == 'hair')
+		{
+			p[0] += '-' + res['hair']['style'];
+		}
 
 		var part = await Jimp.read('portraits/' + p[0] + '.png');
 		if (p[0] == 'countershade')
