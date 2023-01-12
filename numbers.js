@@ -143,6 +143,36 @@ function GetNumber(original)
 	};
 }
 
+router.get('/number/md', function(req, res) {
+	var md = '| Decimal | Hex     | Pronounciation               |\n';
+	md += '| ------- | ------- | ---------------------------- |\n';
+	for (var i = 0; i < 0x40; i++)
+	{
+		var num = GetNumber(i);
+		md += `| ${num['dec'].toString().padEnd(7)} | ${num['fhx'].toString().padEnd(7)} | ${num['fel'].toString().padEnd(28)} |\n`;
+	}
+	for (var i = 0x40; i < 0x100; i += 0x10)
+	{
+		var num = GetNumber(i);
+		md += `| ${num['dec'].toString().padEnd(7)} | ${num['fhx'].toString().padEnd(7)} | ${num['fel'].toString().padEnd(28)} |\n`;
+	}
+	for (var i = 0x100; i <= 0x600; i += 0x20)
+	{
+		var num = GetNumber(i);
+		md += `| ${num['dec'].toString().padEnd(7)} | ${num['fhx'].toString().padEnd(7)} | ${num['fel'].toString().padEnd(28)} |\n`;
+	}
+	for (var i = 0x1000; i <= 0x2000; i += 0x100)
+	{
+		var num = GetNumber(i);
+		md += `| ${num['dec'].toString().padEnd(7)} | ${num['fhx'].toString().padEnd(7)} | ${num['fel'].toString().padEnd(28)} |\n`;
+	}
+	var num = GetNumber(0x4444);
+	md += `| ${num['dec'].toString().padEnd(7)} | ${num['fhx'].toString().padEnd(7)} | ${num['fel'].toString().padEnd(28)} |\n`;
+
+	res.type('.md');
+	res.send(md);
+});
+
 router.get('/number/:num/json', express.json(), function(req, res) {
 	res.json(GetNumber(req.params['num'] || 1));
 });

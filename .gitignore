@@ -128,3 +128,5 @@ dist
 go.bat
 package-lock.json
 *.zip
+charclaims.json
+*.pspimage
