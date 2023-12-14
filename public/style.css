@@ -9,15 +9,26 @@ input[type=text] {
 	color: #c792ea;
 	width: 15%;
 }
-button {
+button, input[type=submit] {
 	background: #c792ea;
 	border: 1px solid #57346e;
 	color: #57346e;
 	width: 2em;
 }
-button, input[type=text] {
+button, input[type=text], input[type=submit] {
 	padding: 0.25em;
 	font-size: 100%;
+}
+input[type=submit] {
+	width: auto;
+	padding: 0.25em 0.75em;
+}
+form {
+	margin: 1em;
+}
+form label {
+	display: block;
+	margin: 1em 0.25em;
 }
 table, td, th {
 	border-collapse: collapse;

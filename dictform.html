@@ -1,0 +1,21 @@
+
+<form onsubmit="submitIt(); return false;">
+	<label> Word: <input type="text" id="word"></label>
+	<label><input type="checkbox" id="english"> Word is in English</label>
+	<label><input type="checkbox" id="json"> Result as JSON</label>
+	<input type="submit" onclick="submitIt();" value="Look up">
+</form>
+<script>
+	function submitIt() {
+		var word = document.getElementById('word').value;
+		var inEnglish = document.getElementById('english').checked;
+		var asJson = document.getElementById('json').checked;
+		var target = 'ROOT/dict/';
+		if (inEnglish) target += 'eng/';
+		target += encodeURIComponent(word);
+		if (asJson) target += '/json';
+		document.location = target;
+		event.cancelBubble = true;
+		return false;
+	}
+</script>

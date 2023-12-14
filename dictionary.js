@@ -1,9 +1,16 @@
 const express = require('express');
 const fs = require('fs');
+const os = require('os');
 const router = express.Router();
 const encode = require('./encoder').encode;
 
-const header = fs.readFileSync('header.html', 'utf8');
+root = "/faas";
+console.log(os.hostname());
+if (os.hostname().indexOf("Omoikane") > -1)
+	root = "";
+console.log(`Root: "${root}"`);
+
+const header = fs.readFileSync('header.html', 'utf8').replaceAll("ROOT", root);
 
 const conjCols = [ 'present', 'past', 'future', 'progressive' ];
 const conjRows = [
@@ -107,7 +114,7 @@ function makeLetterBar(current)
 		html += '\t';
 		if (letters[i] != '-')
 			html += '| ';
-		html += `<a href="/faas/dict?letter=${letters[i]}">`;
+		html += `<a href="${root}/dict?letter=${letters[i]}">`;
 		if (letters[i] == current) html += '<b>';
 		html += letters[i].toUpperCase();
 		if (letters[i] == current) html += '</b>';
@@ -306,7 +313,9 @@ router.get('/dict/:word', function(req, res) {
 router.get('/dict', function(req, res) {
 	if (req.query['letter'] == undefined)
 	{
-		var html = header + makeLetterBar('*') + '\n\n<p>Please select a starting letter.</p>';
+		//var html = header + makeLetterBar('*') + '\n\n<p>Please select a starting letter.</p>';
+		//res.send(html);
+		var html = header + makeLetterBar('*') + fs.readFileSync('dictform.html', 'utf8').replaceAll("ROOT", root);
 		res.send(html);
 	}
 	else
@@ -316,7 +325,7 @@ router.get('/dict', function(req, res) {
 		var html = header + makeLetterBar(letter) + '\n\n<ul>\n';
 		var hits  = dict.filter(entry => entry['felin'].startsWith(letter));
 		for (var entry in hits)
-			html += `\t<li><a href="/faas/dict/${hits[entry]['felin']}">${hits[entry]['felin']}</a> <span class="pos-${hits[entry]['pos']}">-</span> ${hits[entry]['english']}</li>\n`;
+			html += `\t<li><a href="${root}/dict/${hits[entry]['felin']}">${hits[entry]['felin']}</a> <span class="pos-${hits[entry]['pos']}">-</span> ${hits[entry]['english']}</li>\n`;
 		html += '</ul>';
 		res.send(html);
 	}
