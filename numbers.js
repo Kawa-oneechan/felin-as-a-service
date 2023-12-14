@@ -1,9 +1,16 @@
 const express = require('express');
 const fs = require('fs');
+const os = require('os');
 const router = express.Router();
 const encode = require('./encoder').encode;
 
-const header = fs.readFileSync('header.html', 'utf8');
+root = "/faas";
+console.log(os.hostname());
+if (os.hostname().indexOf("Omoikane") > -1)
+	root = "";
+console.log(`Root: "${root}"`);
+
+const header = fs.readFileSync('header.html', 'utf8').replaceAll("ROOT", root);
 
 function GetNumber(original)
 {
