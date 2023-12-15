@@ -5,16 +5,39 @@
 	<label><input type="checkbox" id="json"> Result as JSON</label>
 	<input type="submit" onclick="submitIt();" value="Look up">
 </form>
+<div id="result"></div>
 <script>
 	function submitIt() {
 		var word = document.getElementById('word').value;
 		var inEnglish = document.getElementById('english').checked;
 		var asJson = document.getElementById('json').checked;
+		var result = document.getElementById('result');
+
 		var target = 'ROOT/dict/';
 		if (inEnglish) target += 'eng/';
 		target += encodeURIComponent(word);
-		if (asJson) target += '/json';
-		document.location = target;
+		if (asJson)
+		{
+			target += '/json';
+			document.location = target;
+		}
+		else
+		{
+			target += '?bare';
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', target);
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					result.innerHTML = xhr.responseText;
+				}
+				else {
+					result.innerHTML = 'Request failed. Returned status of ' + xhr.status;
+				}
+			};
+			xhr.send();
+		}
+
 		event.cancelBubble = true;
 		return false;
 	}

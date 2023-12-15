@@ -174,6 +174,7 @@ router.get('/dict/eng/:word', function(req, res) {
 	}
 	var lastHeader = '';
 	var html = header;
+	if (req.query['bare'] != undefined) html = '';
 	for (var e in hits)
 	{
 		const entry = hits[e];
@@ -284,6 +285,9 @@ router.get('/dict/:word', function(req, res) {
 	}
 	var lastHeader = '';
 	var html = header + makeLetterBar(req.params['word'][0]) + '\n\n';
+	console.log(req.query);
+	if (req.query['bare'] != undefined) html = '';
+
 	if (decon)
 		html += `<p>(Original input was <i>${decon}</i>.)</p>\n`;
 	for (var e in hits)
