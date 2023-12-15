@@ -3,11 +3,17 @@ body {
 	color: #5ee38a;
 	font-family: sans-serif;
 }
+main {
+	columns: 2;
+}
+section {
+	break-inside: avoid;
+}
 input[type=text] {
 	background: #432556; /*#57346e;*/
 	border: 1px solid #c792ea;
 	color: #c792ea;
-	width: 15%;
+	width: 50%;
 }
 button, input[type=submit] {
 	background: #c792ea;

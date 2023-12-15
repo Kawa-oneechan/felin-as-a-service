@@ -29,19 +29,22 @@ function fetch(id)
 </script>
 <img src="/faas/librarian.gif" alt="sleeping librarian" align="right">
 <h1>Felin as a Service</h1>
-<h2>Features</h2>
-<h3>Generate personal names</h3>
+<main>
+<section>
+<h2>Generate personal names</h2>
 <label><input type="text" id="namegen"></label> <button onclick="fetch('namegen');">&#x21BB;</button>
 <ul>
 <li><a href="namegen">/namegen</a> returns one random personal name in a list.</li>
 <li><a href="namegen/table">/namegen/table</a> returns the same in a table.</li>
 <li><a href="namegen/json">/namegen/json</a> returns the same in a JSON data structure.</li>
-<li>You can specify a gender with the <a href="namegen?male">male</a> and <a href="namegen?female">female</a> parameters. This surpresses the gender icons in list and table mode.</li>
+<li>You can specify a gender with the <a href="namegen?male">male</a> and <a href="namegen?female">female</a> parameters. This supresses the gender icons in list and table mode.</li>
 <li>You can specify an amount with the <a href="namegen?amount=10">amount</a> parameter.</li>
 <li>You can specify a randomizer seed with the <a href="namegen?seed=42">seed</a> parameter.</li>
 <li>All of this can of course be combined: <a href="namegen/table?amount=20&seed=42">/namegen/table?amount=20&seed=42</a>.
 </ul>
-<h3>Generate place names</h3>
+</section>
+<section>
+<h2>Generate place names</h2>
 <label><input type="text" id="placegen"></label> <button onclick="fetch('placegen');">&#x21BB;</button>
 <ul>
 <li><a href="placegen">/placegen</a> returns one random place name, in English and Felinese, in a list.</li>
@@ -50,12 +53,16 @@ function fetch(id)
 <li>Like with personal names, you can specify an amount and seed with the <a href="placegen?amount=10">amount</a> and <a href="placegen?seed=42">seed</a> parameters.</li>
 <li>All of this can of course be combined: <a href="placegen/table?amount=20&seed=42">/placegen/table?amount=20&seed=42</a>.
 </ul>
-<h3>Generate character descriptions</h3>
+</section>
+<section>
+<h2>Generate character descriptions</h2>
 <ul>
 <li>The character description generator works just like the name generator, except <a href="chargen">/chargen</a>'s list output is prosaic and <a href="chargen/table">/chargen/table</a> always includes gender icons.</li>
-<li>Characters can be claimed via the Firrhna Project and bcord Discord servers. You can list all claims for a given user with the <a href="chargen/table?claimant=Kawa-oneechan">claimant</a> parameter.</li>
+<li>Characters can be claimed via the Firrhna Project, Lettie fanclub, and bcord Discord servers. You can list all claims for a given user with the <a href="chargen/table?claimant=Kawa-oneechan">claimant</a> parameter.</li>
 </ul>
-<h3>Dictionary lookup</h3>
+</section>
+<section>
+<h2>Dictionary lookup</h2>
 <ul>
 <li><a href="dict">/dict</a> returns a list of initial letters.</li>
 <li><a href="dict?letter=t">/dict?letter=[L]</a> returns a list of all words starting with that letter.</li>
@@ -64,17 +71,23 @@ function fetch(id)
 <li><a href="dict/tashir/json">/dict/[word]/json</a> returns all information on matching entries in JSON.</li>
 <li><a href="dict/eng/wild">/dict/eng/[word]</a> and <a href="dict/eng/wild/json">/dict/eng/[word]/json</a> work the same but look up the <i>english</i> word.</li>
 </ul>
-<h3>Number lookup</h3>
+</section>
+<section>
+<h2>Number lookup</h2>
 <ul>
 <li><a href="number/69">/number/[num]</a> returns a table with the given number in hexadecimal and translated, including felin script and IPA pronunciation.</li>
 <li><a href="number/69/json">/number/[num]/json</a> returns the same information in JSON.</li>
 <li>Also try <a href="number/0x1F">/number/0x[num-in-hex]</a>.</li>
 </ul>
-<h3>More resources</h3>
+</section>
+<section>
+<h2>More resources</h2>
 <ul>
 <li><a href="https://firrhna-project.fandom.com">The Firrhna Project Wiki</a></li>
 <li><a href="https://www.conworkshop.com/view_language.php?l=FEL">Felinese on ConWorkshop</a></li>
 </ul>
+</section>
+</main>
 <small><i>Felin as a Service</i> is a <i>Firrhna Production</i>, &copy; 2022. It is designed and implemented by <a href="https://helmet.kafuka.org/logopending">Kawa</a>, using <a href="https://nodejs.dev">NodeJS</a>, <a href="https://expressjs.com">Express</a>, <a href="http://aseprite.org">Aseprite</a>, <a href="https://fontforge.org">FontForge</a>, and <a href="https://textpad.com">TextPad</a>.
 <script>
 fetch('namegen');
