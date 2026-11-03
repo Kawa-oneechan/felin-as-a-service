@@ -144,3 +144,7 @@ a:active {
 	background: #874493;
 	content: 'abbr';
 }
+
+@media (orientation: portrait) {
+	main { columns: 0; clear: right; }
+}
